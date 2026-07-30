@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/App.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/App.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/App.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/App.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/Particle.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/Particle.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/Particle.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/Particle.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/Renderer.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/Renderer.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/Renderer.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/Renderer.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/SDLRenderer.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/SDLRenderer.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/SDLRenderer.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/SDLRenderer.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/Simulation.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/Simulation.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/Simulation.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/Simulation.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/UniformGrid.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/UniformGrid.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/UniformGrid.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/UniformGrid.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/main.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/main.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/main.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/utils/Float2.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/utils/Float2.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/utils/Float2.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/utils/Float2.cpp.o"
+},
+{
+  "directory": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build",
+  "command": "/usr/bin/c++  -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/FluidSim.dir/src/utils/Polies.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/utils/Polies.cpp",
+  "file": "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/src/utils/Polies.cpp",
+  "output": "CMakeFiles/FluidSim.dir/src/utils/Polies.cpp.o"
+}
+]

@@ -1,0 +1,30 @@
+#pragma once
+namespace Config {
+
+constexpr int windowWidth = 1000;
+constexpr int windowHeight = 600;
+
+constexpr float timeStep = 1.f / 60.f;
+
+constexpr float spacing = 7.f;
+
+constexpr int countX = 40;
+constexpr int countY = 40;
+
+constexpr int offsetX = 200;
+constexpr int offsetY = 200;
+
+constexpr int max_boundary_count = 2000;
+constexpr int boundary_layers = 0;
+constexpr float GRAVITY_COEF = 30.f;
+constexpr float RESTITUTION_COEF = 0.15f;
+constexpr float GAS_CONSTANT = 200000.f;
+constexpr float REST_DENSITY = .1f;
+constexpr float VISCOSITY_COEFF = 40.0f;
+constexpr float PARTICLE_MASS = 3.f;
+constexpr float h = 15.f;
+const float h8 = h * h * h * h * h * h * h * h;
+const float h2 = h * h;
+const float h5 = h * h * h * h * h;
+} // namespace Config
+//
