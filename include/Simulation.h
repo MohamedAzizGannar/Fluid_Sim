@@ -18,6 +18,7 @@ public:
   int getParticleCount() const { return m_activeCount; }
   bool isBoundary(int i) const { return i >= m_fluidCount; }
   void step(float dt);
+  void stepMP(float dt);
 
   const Float2 *getPositions();
   const Float2 *getVelocities() { return m_velocities; }
@@ -38,11 +39,18 @@ private:
   void calculatePredictedPositions(float dt);
   void calculateDensity();
   void calculatePressure();
-
   void applyGravity();
   void applyPressureAndViscosityForce();
-  void applyViscosityForce();
+
   void addBoundaryParticle(Float2 pos);
+
+  void calculatePressureMP();
+  void calculateDensityMP();
+  void applyPressureAndViscosityForceMP();
+  void applyGravityMP();
+  void applyForcesMP();
+  void integrateMP(float dt);
+  void resolveCollisionsMP();
 
 private:
   const static int m_fluidCount = Config::countX * Config::countY;

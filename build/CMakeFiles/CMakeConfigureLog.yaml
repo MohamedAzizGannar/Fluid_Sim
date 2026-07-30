@@ -5,7 +5,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
@@ -56,14 +56,14 @@ events:
     kind: "message-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Darwin - 24.6.0 - arm64
   -
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Path to a program."
@@ -129,7 +129,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER"
     description: "CXX compiler"
@@ -190,7 +190,7 @@ events:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -227,7 +227,7 @@ events:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /usr/bin/c++ 
@@ -248,7 +248,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:296 (message)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Detecting CXX compiler apple sysroot: "/usr/bin/c++" "-E" "apple-sdk.cpp"
         # 1 "apple-sdk.cpp"
@@ -289,7 +289,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -336,7 +336,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -383,7 +383,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -430,7 +430,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -477,7 +477,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -524,7 +524,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -571,7 +571,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -631,7 +631,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -691,7 +691,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -751,7 +751,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -811,7 +811,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -871,7 +871,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:66 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_INSTALL_NAME_TOOL"
     description: "Path to a program."
@@ -924,12 +924,12 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E"
-      binary: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E"
+      source: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p"
+      binary: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -943,19 +943,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E'
+        Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_32306/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_32306.dir/build.make CMakeFiles/cmTC_32306.dir/build
-        Building CXX object CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1cff3/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1cff3.dir/build.make CMakeFiles/cmTC_1cff3.dir/build
+        Building CXX object CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"
-         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
@@ -969,13 +969,13 @@ events:
          /Library/Developer/CommandLineTools/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_32306
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32306.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_1cff3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1cff3.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_32306 -L/usr/local/lib -v CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_1cff3 -L/usr/local/lib -v CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -988,7 +988,7 @@ events:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64  -v -Wl,-v CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_32306
+        /usr/bin/c++  -arch arm64  -v -Wl,-v CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1cff3
         
       exitCode: 0
   -
@@ -996,7 +996,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
       - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Effective list of requested architectures (possibly empty)  : ""
       Effective list of architectures found in the ABI info binary: "arm64"
@@ -1005,7 +1005,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -1027,24 +1027,24 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E']
+        ignore line: [Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_32306/fast]
-        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_32306.dir/build.make CMakeFiles/cmTC_32306.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1cff3/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1cff3.dir/build.make CMakeFiles/cmTC_1cff3.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-rPwS0E -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-Iynt4p -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1058,13 +1058,13 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_32306]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32306.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_1cff3]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1cff3.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_32306 -L/usr/local/lib -v CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_1cff3 -L/usr/local/lib -v CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1081,10 +1081,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_32306] ==> ignore
+          arg [cmTC_1cff3] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_32306.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_1cff3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
@@ -1110,7 +1110,7 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the CXX compiler's linker: "/Library/Developer/CommandLineTools/usr/bin/ld" "-v"
       @(#)PROGRAM:ld PROJECT:ld-1167.5
@@ -1122,7 +1122,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:7 (find_package)"
+      - "CMakeLists.txt:12 (find_package)"
     name: "SDL2"
     configs:
       -
@@ -1224,6 +1224,14 @@ events:
         path: "/opt/homebrew/share/cps/sdl2.cps"
         mode: "cps"
         reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cmake/SDL2_ttf/SDL2Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cmake/SDL2_ttf/sdl2-config.cmake"
+        mode: "config"
+        reason: "no_exist"
     found:
       path: "/opt/homebrew/lib/cmake/SDL2/SDL2Config.cmake"
       mode: "config"
@@ -1266,10 +1274,6 @@ events:
         - "/Library/Frameworks"
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
-...
-
----
-events:
   -
     kind: "find_package-v1"
     backtrace:
@@ -1421,4 +1425,341 @@ events:
         - "/Library/Frameworks"
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:333 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-camkHm"
+      binary: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-camkHm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-camkHm'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e3538/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e3538.dir/build.make CMakeFiles/cmTC_e3538.dir/build
+        Building CXX object CMakeFiles/cmTC_e3538.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=c++17 -arch arm64 -MD -MT CMakeFiles/cmTC_e3538.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e3538.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e3538.dir/OpenMPTryFlag.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-camkHm/OpenMPTryFlag.cpp
+        /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-camkHm/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e3538.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_e3538/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:425 (find_library)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "OpenMP_libomp_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "omp"
+      - "gomp"
+      - "iomp5"
+    candidate_directories:
+      - "/opt/homebrew/opt/libomp/lib/"
+      - "/opt/homebrew/opt/libomp/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Applications/kitty.app/Contents/MacOS/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    found: "/opt/homebrew/opt/libomp/lib/libomp.dylib"
+    search_context:
+      package_stack:
+        -
+          package_paths:
+            - "/opt/homebrew/opt/libomp"
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Applications/kitty.app/Contents/MacOS"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:435 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "Trying CXX OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib'"
+    directories:
+      source: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-i25awp"
+      binary: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-i25awp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-i25awp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_55763/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_55763.dir/build.make CMakeFiles/cmTC_55763.dir/build
+        Building CXX object CMakeFiles/cmTC_55763.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -std=c++17 -arch arm64   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_55763.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_55763.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_55763.dir/OpenMPTryFlag.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-i25awp/OpenMPTryFlag.cpp
+        /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-i25awp/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_55763.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_55763/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:442 (find_path)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "path"
+    variable: "OpenMP_CXX_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "omp.h"
+    candidate_directories:
+      - "/opt/homebrew/opt/libomp/include/"
+      - "/opt/homebrew/opt/libomp/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Applications/kitty.app/Contents/MacOS/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/include/"
+      - "/opt/homebrew/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/sw/include/"
+      - "/sw/"
+      - "/opt/local/include/"
+      - "/opt/local/"
+      - "/usr/include/X11/"
+      - "/Users/mohamedazizgannar/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/Network/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    found: "/opt/homebrew/opt/libomp/include/"
+    search_context:
+      package_stack:
+        -
+          package_paths:
+            - "/opt/homebrew/opt/libomp"
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Applications/kitty.app/Contents/MacOS"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:446 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:640 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "Trying CXX OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib' and '/opt/homebrew/opt/libomp/include'"
+    directories:
+      source: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-hTcWuh"
+      binary: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-hTcWuh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-hTcWuh'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5c466/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5c466.dir/build.make CMakeFiles/cmTC_5c466.dir/build
+        Building CXX object CMakeFiles/cmTC_5c466.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -std=c++17 -arch arm64   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_5c466.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_5c466.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_5c466.dir/OpenMPTryFlag.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-hTcWuh/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_5c466
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c466.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 CMakeFiles/cmTC_5c466.dir/OpenMPTryFlag.cpp.o -o cmTC_5c466  /opt/homebrew/opt/libomp/lib/libomp.dylib
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:574 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:714 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-9Piy8v"
+      binary: "/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-9Piy8v"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-9Piy8v'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8e7f9/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8e7f9.dir/build.make CMakeFiles/cmTC_8e7f9.dir/build
+        Building CXX object CMakeFiles/cmTC_8e7f9.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -std=c++17 -arch arm64 -MD -MT CMakeFiles/cmTC_8e7f9.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_8e7f9.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_8e7f9.dir/OpenMPCheckVersion.cpp.o -c /Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles/CMakeScratch/TryCompile-9Piy8v/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_8e7f9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e7f9.dir/link.txt --verbose=1
+        /usr/bin/c++  -Xclang -fopenmp -arch arm64 CMakeFiles/cmTC_8e7f9.dir/OpenMPCheckVersion.cpp.o -o cmTC_8e7f9
+        
+      exitCode: 0
 ...

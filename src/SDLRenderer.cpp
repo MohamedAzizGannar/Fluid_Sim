@@ -1,5 +1,7 @@
 
 #include "SDLRenderer.h"
+#include <SDL_pixels.h>
+#include <SDL_render.h>
 #include <cstddef>
 #include <iostream>
 
@@ -59,4 +61,10 @@ void SDLRenderer::drawCircle(float x, float y, SDL_Color color) {
   SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a);
 
   SDL_RenderDrawPoint(m_renderer, x, y);
+}
+void SDLRenderer::drawPoints(const SDL_Point *points, int count,
+                             SDL_Color color) {
+
+  SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a);
+  SDL_RenderDrawPoints(m_renderer, points, count);
 }

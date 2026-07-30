@@ -11,6 +11,7 @@ public:
 
 private:
   void render();
+  void renderOptimized();
   bool m_running;
   IRenderer *m_renderer;
   Simulation *m_simulation;

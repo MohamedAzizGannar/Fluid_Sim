@@ -8,5 +8,7 @@ public:
   virtual void endFrame() = 0;
   virtual void drawCircle(float x, float y) = 0;
   virtual void drawCircle(float x, float y, SDL_Color color) = 0;
+  virtual void drawPoints(const SDL_Point *points, int count,
+                          SDL_Color color) = 0;
   virtual void shutdown() = 0;
 };

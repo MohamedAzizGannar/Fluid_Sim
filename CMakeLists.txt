@@ -11,6 +11,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
+find_package(OpenMP REQUIRED COMPONENTS CXX)
 
 # Automatically gather source and header files
 file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS
@@ -37,6 +38,7 @@ target_link_libraries(${PROJECT_NAME}
   PRIVATE 
   SDL2::SDL2
   SDL2_ttf::SDL2_ttf
+  OpenMP::OpenMP_CXX
 )
 
 # Nice warnings

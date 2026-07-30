@@ -2,6 +2,7 @@
 #pragma once
 #include "IRenderer.h"
 #include "SDL2/SDL.h"
+#include <SDL_pixels.h>
 #include <string>
 
 class SDLRenderer : public IRenderer {
@@ -19,6 +20,7 @@ public:
   void drawTriangle(SDL_Point a, SDL_Point b, SDL_Point c);
   void drawCircle(float x, float y) override;
   void drawCircle(float x, float y, SDL_Color color) override;
+  void drawPoints(const SDL_Point *points, int count, SDL_Color color) override;
 
 private:
   float m_w;

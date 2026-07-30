@@ -225,6 +225,7 @@ FluidSim: CMakeFiles/FluidSim.dir/src/utils/Polies.cpp.o
 FluidSim: CMakeFiles/FluidSim.dir/build.make
 FluidSim: /opt/homebrew/lib/libSDL2-2.0.0.dylib
 FluidSim: /opt/homebrew/Cellar/sdl2_ttf/2.24.0/lib/libSDL2_ttf.dylib
+FluidSim: /opt/homebrew/opt/libomp/lib/libomp.dylib
 FluidSim: CMakeFiles/FluidSim.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable FluidSim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FluidSim.dir/link.txt --verbose=$(VERBOSE)

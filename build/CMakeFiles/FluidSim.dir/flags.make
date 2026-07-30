@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2
+CXX_INCLUDES = -I/Users/mohamedazizgannar/Projects/Personal/Fluid_Sim/include -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -isystem /opt/homebrew/opt/libomp/include
 
-CXX_FLAGSarm64 = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic
+CXX_FLAGSarm64 = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Xclang -fopenmp
 
-CXX_FLAGS = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic
+CXX_FLAGS = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Xclang -fopenmp
 

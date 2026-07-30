@@ -24,11 +24,6 @@ void App::render() {
   red.b = 0;
   red.g = 0;
   red.a = 255;
-  SDL_Color blue;
-  blue.b = 255;
-  blue.r = 0;
-  blue.g = 0;
-  blue.a = 255;
 
   const Float2 *positions = m_simulation->getPositions();
   const Float2 *velocities = m_simulation->getVelocities();
@@ -65,6 +60,23 @@ void App::render() {
 
   m_renderer->endFrame();
 }
+void App::renderOptimized() {
+  m_renderer->beginFrame();
+  SDL_Color blue;
+  blue.b = 255;
+  blue.r = 0;
+  blue.g = 0;
+  blue.a = 255;
+  const int count = m_simulation->getParticleCount();
+  const Float2 *positions = m_simulation->getPositions();
+  SDL_Point points[count];
+  for (int i = 0; i < count; i++) {
+    points[i].x = positions[i].x;
+    points[i].y = positions[i].y;
+  }
+  m_renderer->drawPoints(points, count, blue);
+  m_renderer->endFrame();
+}
 void App::run() {
 
   Uint64 previous = SDL_GetPerformanceCounter();
@@ -93,7 +105,7 @@ void App::run() {
     while (accumulator >= Config::timeStep &&
            stepsThisFrame < maxStepsPerFrame) {
       auto t0 = SDL_GetPerformanceCounter();
-      m_simulation->step(Config::timeStep);
+      m_simulation->stepMP(Config::timeStep);
       auto t1 = SDL_GetPerformanceCounter();
       double ms = (t1 - t0) * 1000.0 / SDL_GetPerformanceFrequency();
       accumulator -= Config::timeStep;
@@ -105,7 +117,7 @@ void App::run() {
       accumulator = 0.0; // drop debt rather than let it compound forever
       std::cout << "Falling behind: capped at " << stepsThisFrame << " steps\n";
     }
-    render();
+    renderOptimized();
     frameCount++;
     fpsTimer += frameTime;
 
@@ -119,7 +131,6 @@ void App::run() {
       std::cout << " Avg Speed : " << m_simulation->avg_speed
                 << "\nAvg Density : " << m_simulation->avg_density
                 << "\nAvg Pressure : " << m_simulation->avg_pressure
-                << "\nMax Speed : " << m_simulation->max_speed
                 << "\nAvg neighbor Count : " << m_simulation->avg_neighbor_count
                 << "\n";
       stepTimeSum = 0.0;
