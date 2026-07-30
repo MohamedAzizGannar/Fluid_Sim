@@ -5,6 +5,9 @@
 #include "utils/Polies.h"
 
 #include "SDL.h"
+#include <SDL_stdinc.h>
+#include <SDL_timer.h>
+#include <iostream>
 #include <omp.h>
 
 Simulation::Simulation(int countX, int countY, float spacing, BoundingBox box)
@@ -195,15 +198,17 @@ void Simulation::applyPressureAndViscosityForce() {
           if (m_densities[i] <= minDensityForForce ||
               m_densities[j] <= minDensityForForce)
             continue;
+          float r = sqrt(r2);
           Float2 dir = (m_positions[i] - m_positions[j]);
           float coeff = (m_pressures[i] / (m_densities[i] * m_densities[i])) +
                         m_pressures[j] / (m_densities[j] * m_densities[j]);
-          pressureForce -= GradientSpiky(dir) * coeff * Config::PARTICLE_MASS;
+          pressureForce -=
+              GradientSpiky(dir, r) * coeff * Config::PARTICLE_MASS;
           if (m_densities[j] <= 1e-2)
             continue;
           Float2 coeff_visc =
               (m_velocities[j] - m_velocities[i]) / m_densities[j];
-          float lapl = ViscosityLaplactian(sqrt(r2));
+          float lapl = ViscosityLaplactian(r);
           viscForce += coeff_visc * lapl * Config::PARTICLE_MASS;
           avg_neighbor_count++;
         }
@@ -240,8 +245,9 @@ void Simulation::calculateDensityMP() {
         if (!m_grid.isValidCell(nx, ny))
           continue;
         const Cell &c_cell = m_grid.getCell(nx, ny);
+        Float2 position_i = m_positions[i];
         for (int j : c_cell.particleIndices) {
-          float r2 = distanceSqrd(m_positions[i], m_positions[j]);
+          float r2 = distanceSqrd(position_i, m_positions[j]);
           if (r2 >= Config::h2)
             continue;
           density += Config::PARTICLE_MASS * WPoly6(r2);
@@ -262,14 +268,33 @@ void Simulation::calculatePressureMP() {
   }
 }
 void Simulation::stepMP(float dt) {
+  Uint64 freq = SDL_GetPerformanceFrequency();
   clearForces();
+  Uint64 t0 = SDL_GetPerformanceCounter();
   m_grid.rebuild(m_positions, m_activeCount);
 
+  Uint64 t1 = SDL_GetPerformanceCounter();
   calculateDensityMP();
+  Uint64 t2 = SDL_GetPerformanceCounter();
   calculatePressureMP();
+  Uint64 t3 = SDL_GetPerformanceCounter();
   applyForcesMP();
+  Uint64 t4 = SDL_GetPerformanceCounter();
   integrateMP(dt);
+  Uint64 t5 = SDL_GetPerformanceCounter();
   resolveCollisionsMP();
+  Uint64 t6 = SDL_GetPerformanceCounter();
+  double rebuild_time = 1000 * double(t1 - t0) / double(freq);
+  double density_time = 1000 * double(t2 - t1) / double(freq);
+  double pressure_time = 1000 * double(t3 - t2) / double(freq);
+  double forces_time = 1000 * double(t4 - t3) / double(freq);
+  double integrate_time = 1000 * double(t5 - t4) / double(freq);
+  double collisions_time = 1000 * double(t6 - t5) / double(freq);
+  std::cout << "Rebuild : " << rebuild_time << " ms\nDensity : " << density_time
+            << " ms\nPressure : " << pressure_time
+            << " ms\nForces : " << forces_time
+            << " ms\nIntegrate : " << integrate_time
+            << " ms\nCollisions : " << collisions_time << " ms\n";
 }
 void Simulation::applyPressureAndViscosityForceMP() {
   avg_neighbor_count = 0.f;
@@ -283,6 +308,11 @@ void Simulation::applyPressureAndViscosityForceMP() {
     Float2 pressureForce = Float2(0.f, 0.f);
 
     GridCoord cellCoord = m_grid.getCellCoordFromPos(m_positions[i]);
+    float density_i = m_densities[i];
+    float pressure_i = m_pressures[i];
+    Float2 position_i = m_positions[i];
+    Float2 velocity_i = m_velocities[i];
+    float inv_density2 = 1.f / (density_i * density_i);
     for (int dx = -1; dx <= 1; dx++) {
       for (int dy = -1; dy <= 1; dy++) {
         int nx = cellCoord.x + dx;
@@ -291,24 +321,24 @@ void Simulation::applyPressureAndViscosityForceMP() {
         if (!m_grid.isValidCell(nx, ny))
           continue;
         const Cell &c_cell = m_grid.getCell(nx, ny);
+        if (density_i <= minDensityForForce)
+          continue;
         for (int j : c_cell.particleIndices) {
           if (i == j)
             continue;
-          float r2 = distanceSqrd(m_positions[i], m_positions[j]);
+          float r2 = distanceSqrd(position_i, m_positions[j]);
           if (r2 >= Config::h2)
             continue;
-          if (m_densities[i] <= minDensityForForce ||
-              m_densities[j] <= minDensityForForce)
+          if (m_densities[j] <= minDensityForForce)
             continue;
-          Float2 dir = (m_positions[i] - m_positions[j]);
-          float coeff = (m_pressures[i] / (m_densities[i] * m_densities[i])) +
+          float r = sqrt(r2);
+          Float2 dir = (position_i - m_positions[j]);
+          float coeff = (pressure_i * inv_density2) +
                         m_pressures[j] / (m_densities[j] * m_densities[j]);
-          pressureForce -= GradientSpiky(dir) * coeff * Config::PARTICLE_MASS;
-          if (m_densities[j] <= 1e-2)
-            continue;
-          Float2 coeff_visc =
-              (m_velocities[j] - m_velocities[i]) / m_densities[j];
-          float lapl = ViscosityLaplactian(sqrt(r2));
+          pressureForce -=
+              GradientSpiky(dir, r) * coeff * Config::PARTICLE_MASS;
+          Float2 coeff_visc = (m_velocities[j] - velocity_i) / m_densities[j];
+          float lapl = ViscosityLaplactian(r);
           viscForce += coeff_visc * lapl * Config::PARTICLE_MASS;
           local_neighbor++;
         }
@@ -379,7 +409,7 @@ void Simulation::resolveCollisionsMP() {
   }
 }
 void Simulation::applyGravityMP() {
-#pragma omp for schedule(static)
+#pragma omp parallel for schedule(static)
   for (int i = 0; i < m_fluidCount; i++) {
     m_forces[i] += Float2(0.f, Config::GRAVITY_COEF);
   }
