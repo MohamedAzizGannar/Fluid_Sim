@@ -8,7 +8,7 @@
 
 Simulation::Simulation(int countX, int countY, float spacing, BoundingBox box)
     : m_countX(countX), m_countY(countY), m_spacing(spacing), m_box(box),
-      m_grid(Config::h / 2.f, m_box.minX, m_box.minY, m_box.maxX, m_box.maxY) {}
+      m_grid(Config::h, m_box.minX, m_box.minY, m_box.maxX, m_box.maxY) {}
 
 void Simulation::initBlock() {
   int index = 0;
@@ -66,21 +66,15 @@ void Simulation::step(float dt) {
   clearForces();
   m_grid.rebuild(m_positions, m_activeCount);
 
-  auto tA = SDL_GetPerformanceCounter();
   calculateDensity();
-  auto tB = SDL_GetPerformanceCounter();
   calculatePressure();
-  auto tC = SDL_GetPerformanceCounter();
   applyForces();
-  auto tD = SDL_GetPerformanceCounter();
   integrate(dt);
-  auto tE = SDL_GetPerformanceCounter();
   resolveCollisions();
 }
 
 void Simulation::integrate(float dt) {
 
-  constexpr float maxSpeedAllowed = 80.f; // tune to your scene scale
   avg_density = 0.f;
   avg_pressure = 0.f;
   avg_speed = 0.f;
@@ -89,9 +83,9 @@ void Simulation::integrate(float dt) {
   for (int i = 0; i < m_fluidCount; i++) {
     m_acceleration[i] = m_forces[i];
     m_velocities[i] += m_acceleration[i] * dt;
-    if (m_velocities[i].length() > maxSpeedAllowed) {
-      m_velocities[i] =
-          m_velocities[i] * (maxSpeedAllowed / m_velocities[i].length());
+    if (m_velocities[i].length() > Config::maxSpeedAllowed) {
+      m_velocities[i] = m_velocities[i] *
+                        (Config::maxSpeedAllowed / m_velocities[i].length());
     }
     m_positions[i] += m_velocities[i] * dt;
     avg_speed += m_velocities[i].length();
@@ -144,8 +138,8 @@ void Simulation::calculateDensity() {
   for (int i = 0; i < m_activeCount; i++) {
     m_densities[i] = 0.f;
     GridCoord cellCoord = m_grid.getCellCoordFromPos(m_positions[i]);
-    for (int dx = -2; dx <= 2; dx++) {
-      for (int dy = -2; dy <= 2; dy++) {
+    for (int dx = -1; dx <= 1; dx++) {
+      for (int dy = -1; dy <= 1; dy++) {
         int nx = cellCoord.x + dx;
         int ny = cellCoord.y + dy;
         if (!m_grid.isValidCell(nx, ny))
@@ -182,8 +176,8 @@ void Simulation::applyPressureAndViscosityForce() {
     Float2 pressureForce = Float2(0.f, 0.f);
 
     GridCoord cellCoord = m_grid.getCellCoordFromPos(m_positions[i]);
-    for (int dx = -2; dx <= 2; dx++) {
-      for (int dy = -2; dy <= 2; dy++) {
+    for (int dx = -1; dx <= 1; dx++) {
+      for (int dy = -1; dy <= 1; dy++) {
         int nx = cellCoord.x + dx;
         int ny = cellCoord.y + dy;
 

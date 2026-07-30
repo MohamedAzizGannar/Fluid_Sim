@@ -23,8 +23,6 @@ void UniformGrid::rebuild(const Float2 *positions, int particleCount) {
   for (int i = 0; i < particleCount; i++) {
     GridCoord cellCoord = getCellCoordFromPos(positions[i]);
     if (!isValidCell(cellCoord.x, cellCoord.y)) {
-      std::cout << "DROPPED particle " << i << " at (" << positions[i].x << ", "
-                << positions[i].y << ")\n";
       continue;
     }
     int cellIndex = getCellIndex(cellCoord.x, cellCoord.y);

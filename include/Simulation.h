@@ -20,6 +20,7 @@ public:
   void step(float dt);
 
   const Float2 *getPositions();
+  const Float2 *getVelocities() { return m_velocities; }
 
   float avg_density;
   float avg_pressure;

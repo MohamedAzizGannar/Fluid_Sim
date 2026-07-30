@@ -31,14 +31,36 @@ void App::render() {
   blue.a = 255;
 
   const Float2 *positions = m_simulation->getPositions();
+  const Float2 *velocities = m_simulation->getVelocities();
   int count = m_simulation->getParticleCount();
 
+  SDL_Color color;
   for (int i = 0; i < count; i++) {
     if (m_simulation->isBoundary(i)) {
       continue;
     }
+    float speed = velocities[i].length();
+    float t = std::clamp(speed / Config::maxSpeedAllowed, 0.0f, 1.0f);
 
-    m_renderer->drawCircle(positions[i].x, positions[i].y, blue);
+    if (t < 0.33f) {
+      float u = t / 0.33f;
+      color.r = 0;
+      color.g = static_cast<Uint8>(255.0f * u);
+      color.b = 255;
+    } else if (t < 0.66f) {
+      float u = (t - 0.33f) / 0.33f;
+      color.r = static_cast<Uint8>(255.0f * u);
+      color.g = 255;
+      color.b = static_cast<Uint8>(255.0f * (1.0f - u));
+    } else {
+      float u = (t - 0.66f) / 0.34f;
+      color.r = 255;
+      color.g = static_cast<Uint8>(255.0f * (1.0f - u));
+      color.b = 0;
+    }
+    color.a = 255;
+
+    m_renderer->drawCircle(positions[i].x, positions[i].y, color);
   }
 
   m_renderer->endFrame();
