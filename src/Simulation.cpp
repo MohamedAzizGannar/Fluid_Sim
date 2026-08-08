@@ -7,6 +7,7 @@
 #include "SDL.h"
 #include <SDL_stdinc.h>
 #include <SDL_timer.h>
+#include <algorithm>
 #include <iostream>
 #include <omp.h>
 
@@ -237,7 +238,8 @@ void Simulation::calculateDensityMP() {
   for (int i = 0; i < m_activeCount; i++) {
     float density = 0.f;
     m_densities[i] = 0.f;
-    GridCoord cellCoord = m_grid.getCellCoordFromPos(m_positions[i]);
+    Float2 position_i = m_positions[i];
+    GridCoord cellCoord = m_grid.getCellCoordFromPos(position_i);
     for (int dx = -1; dx <= 1; dx++) {
       for (int dy = -1; dy <= 1; dy++) {
         int nx = cellCoord.x + dx;
@@ -245,7 +247,6 @@ void Simulation::calculateDensityMP() {
         if (!m_grid.isValidCell(nx, ny))
           continue;
         const Cell &c_cell = m_grid.getCell(nx, ny);
-        Float2 position_i = m_positions[i];
         for (int j : c_cell.particleIndices) {
           float r2 = distanceSqrd(position_i, m_positions[j]);
           if (r2 >= Config::h2)
@@ -313,6 +314,8 @@ void Simulation::applyPressureAndViscosityForceMP() {
     Float2 position_i = m_positions[i];
     Float2 velocity_i = m_velocities[i];
     float inv_density2 = 1.f / (density_i * density_i);
+    if (density_i <= minDensityForForce)
+      continue;
     for (int dx = -1; dx <= 1; dx++) {
       for (int dy = -1; dy <= 1; dy++) {
         int nx = cellCoord.x + dx;
@@ -321,23 +324,27 @@ void Simulation::applyPressureAndViscosityForceMP() {
         if (!m_grid.isValidCell(nx, ny))
           continue;
         const Cell &c_cell = m_grid.getCell(nx, ny);
-        if (density_i <= minDensityForForce)
-          continue;
         for (int j : c_cell.particleIndices) {
           if (i == j)
             continue;
-          float r2 = distanceSqrd(position_i, m_positions[j]);
+
+          float density_j = m_densities[j];
+          float pressure_j = m_pressures[j];
+          Float2 position_j = m_positions[j];
+          Float2 velocity_j = m_velocities[j];
+          float inv_density2_j = 1.f / (density_j * density_j);
+          float r2 = distanceSqrd(position_i, position_j);
           if (r2 >= Config::h2)
             continue;
-          if (m_densities[j] <= minDensityForForce)
+          if (density_j <= minDensityForForce)
             continue;
           float r = sqrt(r2);
-          Float2 dir = (position_i - m_positions[j]);
-          float coeff = (pressure_i * inv_density2) +
-                        m_pressures[j] / (m_densities[j] * m_densities[j]);
+          Float2 dir = (position_i - position_j);
+          float coeff =
+              (pressure_i * inv_density2) + pressure_j * inv_density2_j;
           pressureForce -=
               GradientSpiky(dir, r) * coeff * Config::PARTICLE_MASS;
-          Float2 coeff_visc = (m_velocities[j] - velocity_i) / m_densities[j];
+          Float2 coeff_visc = (velocity_j - velocity_i) / density_j;
           float lapl = ViscosityLaplactian(r);
           viscForce += coeff_visc * lapl * Config::PARTICLE_MASS;
           local_neighbor++;
@@ -346,8 +353,7 @@ void Simulation::applyPressureAndViscosityForceMP() {
     }
     neighbor_sum += local_neighbor;
 
-    m_forces[i] += viscForce * Config::VISCOSITY_COEFF;
-    m_forces[i] += pressureForce;
+    m_forces[i] += pressureForce + viscForce * Config::VISCOSITY_COEFF;
   }
   avg_neighbor_count = static_cast<float>(neighbor_sum / m_fluidCount);
 }
@@ -383,6 +389,15 @@ void Simulation::integrateMP(float dt) {
   avg_density = static_cast<float>(density_sum / m_fluidCount);
   avg_speed = static_cast<float>(speed_sum / m_fluidCount);
 }
+void Simulation::leapfrogIntegrateMP(float dt) {
+  for (int i = 0; i < m_fluidCount; i++) {
+    Float2 past_acc = m_acceleration[i];
+    m_acceleration[i] = m_forces[i];
+    Float2 past_vel = m_velocities[i];
+    m_velocities[i] += (past_acc + m_acceleration[i]) * dt * 1 / 2;
+    m_positions[i] += past_vel * dt + past_acc * dt * dt / 2;
+  }
+}
 void Simulation::resolveCollisionsMP() {
 #pragma omp parallel for schedule(static)
   for (int i = 0; i < m_fluidCount; i++) {
@@ -413,4 +428,20 @@ void Simulation::applyGravityMP() {
   for (int i = 0; i < m_fluidCount; i++) {
     m_forces[i] += Float2(0.f, Config::GRAVITY_COEF);
   }
+}
+float Simulation::calculateStableTimeStep() const {
+  float maxVel = 0.f;
+  float maxAcc = 0.f;
+
+  for (int i = 0; i < m_fluidCount; i++) {
+    maxVel = std::max(maxVel, m_velocities[i].lengthSq());
+    maxAcc = std::max(maxAcc, m_acceleration[i].lengthSq());
+  }
+  maxVel = sqrt(maxVel);
+  maxAcc = sqrt(maxAcc);
+
+  float dtCfl = Config::cfl_factor * Config::h / (maxVel + 1e-6f);
+  float dtForce = std::sqrt(Config::h / (maxAcc + 1e-6f));
+  float dt = std::min({dtCfl, dtForce, Config::max_dt});
+  return std::max(dt, Config::min_dt);
 }

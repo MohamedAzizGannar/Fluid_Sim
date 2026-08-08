@@ -102,13 +102,14 @@ void App::run() {
     }
     constexpr int maxStepsPerFrame = 8;
     int stepsThisFrame = 0;
-    while (accumulator >= Config::timeStep &&
-           stepsThisFrame < maxStepsPerFrame) {
+    while (accumulator > 0.f && stepsThisFrame < maxStepsPerFrame) {
+      float dt = m_simulation->calculateStableTimeStep();
+      dt = std::min(dt, static_cast<float>(accumulator));
       auto t0 = SDL_GetPerformanceCounter();
-      m_simulation->stepMP(Config::timeStep);
+      m_simulation->stepMP(dt);
       auto t1 = SDL_GetPerformanceCounter();
       double ms = (t1 - t0) * 1000.0 / SDL_GetPerformanceFrequency();
-      accumulator -= Config::timeStep;
+      accumulator -= dt;
       stepsThisFrame++;
       stepTimeSum += ms;
       stepCountThisSecond++;

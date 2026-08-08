@@ -23,6 +23,9 @@ public:
   const Float2 *getPositions();
   const Float2 *getVelocities() { return m_velocities; }
 
+  // CFL time step
+  float calculateStableTimeStep() const;
+
   float avg_density;
   float avg_pressure;
   float avg_speed;
@@ -50,6 +53,7 @@ private:
   void applyGravityMP();
   void applyForcesMP();
   void integrateMP(float dt);
+  void leapfrogIntegrateMP(float dt);
   void resolveCollisionsMP();
 
 private:
